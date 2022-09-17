@@ -49,6 +49,16 @@ function index() {
           </Text>
         </Center>
       </Box>
+      <Box>
+        <Space h={'md'}/>
+        <Divider />
+        <Space h={'md'}/>
+        <Center>
+          <Text component="p" lineClamp={2}>
+            Here is a list of completed items for the day:
+          </Text>
+        </Center>
+      </Box>
     </Container>
   );
 }
