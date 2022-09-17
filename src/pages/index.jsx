@@ -39,20 +39,20 @@ function index() {
           </ActionIcon>
         </Box>
       </Center>
+      <Space h={"md"} />
+      <Divider />
+      <Space h={"md"} />
       <Box>
-        <Space h={'md'}/>
-        <Divider />
-        <Space h={'md'}/>
         <Center>
           <Text component="p" lineClamp={2}>
             Here is a list of things that should be done:
           </Text>
         </Center>
       </Box>
+      <Space h={"md"} />
+      <Divider />
+      <Space h={"md"} />
       <Box>
-        <Space h={'md'}/>
-        <Divider />
-        <Space h={'md'}/>
         <Center>
           <Text component="p" lineClamp={2}>
             Here is a list of completed items for the day:
