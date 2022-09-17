@@ -3,8 +3,10 @@ import {
   ActionIcon,
   Container,
   Center,
+  Divider,
   Box,
   Text,
+  Space,
   TextInput,
 } from "@mantine/core";
 import { IconCircleMinus, IconCirclePlus, IconEdit } from "@tabler/icons";
@@ -26,10 +28,10 @@ function index() {
             label="What Needs To Be Done?"
             withAsterisk
           />
-          <ActionIcon color={'green'}>
+          <ActionIcon color={"green"}>
             <IconCirclePlus size={18} />
           </ActionIcon>
-          <ActionIcon color={'red'}>
+          <ActionIcon color={"red"}>
             <IconCircleMinus size={18} />
           </ActionIcon>
           <ActionIcon>
@@ -37,6 +39,16 @@ function index() {
           </ActionIcon>
         </Box>
       </Center>
+      <Box>
+        <Space h={'md'}/>
+        <Divider />
+        <Space h={'md'}/>
+        <Center>
+          <Text component="p" lineClamp={2}>
+            Here is a list of things that should be done:
+          </Text>
+        </Center>
+      </Box>
     </Container>
   );
 }
