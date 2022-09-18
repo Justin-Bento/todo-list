@@ -1,4 +1,5 @@
-import { MantineProvider, Text } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
+import Home from './pages/index.jsx'
 
 export default function App() {
   return (
@@ -7,7 +8,7 @@ export default function App() {
       fontFamily: 'Manrope, sans serif',
       spacing: { xs: 15, sm: 20, md: 25, lg: 30, xl: 40 },
     }}>
-      <Text>Welcome to Mantine!</Text>
+      <Home />
     </MantineProvider>
   );
 }
