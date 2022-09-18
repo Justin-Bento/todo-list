@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Container,
   Center,
@@ -23,7 +23,15 @@ function index() {
           Todo Maniac is app for a list of tasks you need to complete or things
           that you want to do
         </Text>
-        <TodoForm saveTodo={console.log} />
+        <TodoForm
+          saveTodo={(todoText) => {
+            const trimmedText = todoText.trim();
+
+            if (trimmedText.length > 0) {
+              setTodos([...todos, trimmedText]);
+            }
+          }}
+        />
       </Box>
       {/* End of list of completed actions */}
       <Space h={"md"} />
@@ -33,7 +41,14 @@ function index() {
         <Text component="p" lineClamp={2}>
           Here is a list of things that should be done:
         </Text>
-        <TodoList />
+        <TodoList
+          todos={todos}
+          deleteTodo={(todoIndex) => {
+            const newTodos = todos.filter((_, index) => index !== todoIndex);
+
+            setTodos(newTodos);
+          }}
+        />
       </Box>
       {/* End of list of actions */}
       <Space h={"lg"} />
