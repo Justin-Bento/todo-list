@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { TextInput, ActionIcon } from "@mantine/core";
-import { IconCircleMinus, IconCirclePlus, IconEdit } from "@tabler/icons";
 
 const TodoForm = ({ saveTodo }) => {
   const [value, setValue] = useState([]);
@@ -19,15 +18,6 @@ const TodoForm = ({ saveTodo }) => {
         }}
         value={value}
       />
-      <ActionIcon color={"green"}>
-        <IconCirclePlus size={18} />
-      </ActionIcon>
-      <ActionIcon color={"red"}>
-        <IconCircleMinus size={18} />
-      </ActionIcon>
-      <ActionIcon>
-        <IconEdit size={18} />
-      </ActionIcon>
     </form>
   );
 };
