@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import {
   Container,
   Center,
@@ -8,9 +8,11 @@ import {
   Space,
   TextInput,
 } from "@mantine/core";
+import TodoForm from "../components/todo/TodoForm";
 import TodoList from "../components/todo/TodoList";
 
 function index() {
+  const [todos, setTodos] = useState([]);
   return (
     <Container>
       <Box>
@@ -21,14 +23,12 @@ function index() {
           Todo Maniac is app for a list of tasks you need to complete or things
           that you want to do
         </Text>
-        <TextInput
-          placeholder="Task Goes Here"
-          label="What Needs To Be Done?"
-          withAsterisk
-        />
+        <TodoForm saveTodo={console.log} />
       </Box>
       {/* End of list of completed actions */}
       <Space h={"md"} />
+      <Divider />
+      <Space h={"lg"} />
       <Box>
         <Text component="p" lineClamp={2}>
           Here is a list of things that should be done:
@@ -36,7 +36,7 @@ function index() {
         <TodoList />
       </Box>
       {/* End of list of actions */}
-      <Space h={"md"} />
+      <Space h={"lg"} />
       <Divider />
       <Space h={"md"} />
       <Box>
